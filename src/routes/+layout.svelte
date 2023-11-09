@@ -1,10 +1,12 @@
-
+<script>
+	import { base } from '$app/paths';
+</script>
 <nav>
 	<ul>
 		<li>
-			<a href="/">home</a>
-			<a href="/typeface/upright">upright</a>
-			<a href="/typeface/slanted">slanted</a>
+			<a href="{base}/">home</a>
+			<a href="{base}/typeface/upright">upright</a>
+			<a href="{base}/typeface/slanted">slanted</a>
 		</li>
 	</ul>
 </nav>
