@@ -1,0 +1,100 @@
+{
+    "upright": {
+        "instances": {
+            "Light": {
+                "wght": 300,
+                "slnt": 0
+            },
+            "Regular": {
+                "wght": 400,
+                "slnt": 0
+            },
+            "Medium": {
+                "wght": 500,
+                "slnt": 0
+            },
+            "Semibold": {
+                "wght": 600,
+                "slnt": 0
+            },
+            "Bold": {
+                "wght": 700,
+                "slnt": 0
+            },
+            "Extrabold": {
+                "wght": 800,
+                "slnt": 0
+            },
+            "Black": {
+                "wght": 900,
+                "slnt": 0
+            }
+        },
+        "testers": [
+            {
+                "text": "upright black",
+                "current_style": "Black",
+                "font_size": 70
+            },
+            {
+                "text": "upright extrabold",
+                "current_style": "Extrabold",
+                "font_size": 60
+            },
+            {
+                "text": "upright bold",
+                "current_style": "Bold",
+                "font_size": 50
+            }
+        ]
+    },
+    "slanted": {
+        "instances": {
+            "Light": {
+                "wght": 300,
+                "slnt": -15
+            },
+            "Regular": {
+                "wght": 400,
+                "slnt": -15
+            },
+            "Medium": {
+                "wght": 500,
+                "slnt": -15
+            },
+            "Semibold": {
+                "wght": 600,
+                "slnt": -15
+            },
+            "Bold": {
+                "wght": 700,
+                "slnt": -15
+            },
+            "Extrabold": {
+                "wght": 800,
+                "slnt": -15
+            },
+            "Black": {
+                "wght": 900,
+                "slnt": -15
+            }
+        },
+        "testers": [
+            {
+                "text": "slanted light",
+                "current_style": "Light",
+                "font_size": 50
+            },
+            {
+                "text": "slanted regular",
+                "current_style": "Regular",
+                "font_size": 60
+            },
+            {
+                "text": "slanted medium",
+                "current_style": "Medium",
+                "font_size": 70
+            }
+        ]
+    }
+}
