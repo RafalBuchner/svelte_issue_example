@@ -1,38 +1,30 @@
-# create-svelte
+# Description of the issue
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-## Creating a project
+I've prepared this example to inform you about my SvelteKit issue.
 
-If you're seeing this, you've probably already done this step. Congrats!
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+I'm building the website, which will be a presentation of the fonts I've designed.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
 
-## Developing
+For this reason, I've built a simple Tester component (you can find its code in `src/lib/components/tester.svelte`) that is used in `src/routes/typeface/[style]/+page.svelte` file.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-```bash
-npm run dev
+In `src/routes/typeface/[style]/+page.svelte` file, I'm dynamically building several instances of the Tester component based on the data parsed in `src/routes/typeface/[style]/+page.server.svelte` file. Data is loaded from the `src/lib/data/font-data.json` file.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
 
-## Building
+# My question:
 
-To create a production version of your app:
+When I go to the "slanted" subpage directly from my home page, all parameters presented by sliders are correctly initiated.
 
-```bash
-npm run build
-```
+When I switch to the "upright" subpage using the navigation link on the top of the page, **font weight** and **font slant** parameters are not being updated. This way, text that is supposed to be displayed in a heavy upright font is displayed with light-slanted letters. 
 
-You can preview the production build with `npm run preview`.
+When I refresh the subpage using cmd+r (on Mac) or ctrl+r (on Windows), styling reinitiates and looks as it should. Now, when I click on the "slanted" link, the slanted subpage is messed up.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+What should I do to have the correct styling without refreshing the page?
+
+
+
+## Example of what I do want to achieve:
+
+- <a href="https://blazetype.eu/typefaces/">This</a> catalogue of typefaces has similar functionality to what I'm looking for. If you click on some font's name, it will direct you to the subpage of the font with multiple testers (here called "font samplers" – you can see the sidenote on the left "font sampler").
