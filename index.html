@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		
+		<!-- My Comment: importing font for testing in tester -->
+		<link 
+			href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=swap" 
+			rel="stylesheet"
+		>
+
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="./_app/immutable/assets/0.6534caf2.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/2.861253f0.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.c6f7a6cb.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.e108d1fd.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.e71e3bbe.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths.556a9b8f.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.9718c1ce.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.535fc0dd.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.7c8c9eab.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.d46475dd.js">
+	</head>
+
+
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">  <nav class="svelte-18p087z" data-svelte-h="svelte-1vpvg1b"><ul class="svelte-18p087z"><li class="svelte-18p087z"><a href="/sveltekit-issue-example/" class="svelte-18p087z">home</a> <a href="/sveltekit-issue-example/typeface/upright" class="svelte-18p087z">upright</a> <a href="/sveltekit-issue-example/typeface/slanted" class="svelte-18p087z">slanted</a></li></ul></nav> <div class="main_container svelte-18p087z"><h1 data-svelte-h="svelte-1qmxxyv">Description of the issue</h1> <p data-svelte-h="svelte-2z7cwp">I&#39;ve prepared this example to inform you about my SvelteKit issue.</p> <p data-svelte-h="svelte-1094p14">I&#39;m building the website, which will be a presentation of the fonts I&#39;ve designed.</p> <p data-svelte-h="svelte-8thlhr">For this reason, I&#39;ve built a simple Tester component (you can find its code in <code class="svelte-1w5q0y1">src/lib/components/tester.svelte</code>) that is used in <code class="svelte-1w5q0y1">src/routes/typeface/[style]/+page.svelte</code> file.</p> <p data-svelte-h="svelte-9vfbrf">In <code class="svelte-1w5q0y1">src/routes/typeface/[style]/+page.svelte</code> file, I&#39;m dynamically building several instances of the Tester component based on the data parsed in <code class="svelte-1w5q0y1">src/routes/typeface/[style]/+page.server.svelte</code> file. Data is loaded from the <code class="svelte-1w5q0y1">src/lib/data/font-data.json</code> file.</p> <h1 data-svelte-h="svelte-mnvy8o">My question:</h1> <p data-svelte-h="svelte-vm463x">When I go to the &quot;slanted&quot; subpage directly from my home page, all parameters presented by sliders are correctly initiated.</p> <p data-svelte-h="svelte-1adphew">When I switch to the &quot;upright&quot; subpage using the navigation link on the top of the page, <strong>font weight</strong> and <strong>font slant</strong> parameters are not being updated. This way, text that is supposed to be displayed in a heavy upright font is displayed with light-slanted letters.</p> <p data-svelte-h="svelte-f83icj">When I refresh the subpage using cmd+r (on Mac) or ctrl+r (on Windows), styling reinitiates and looks as it should. Now, when I click on the &quot;slanted&quot; link, the slanted subpage is messed up.</p> <p data-svelte-h="svelte-1n1mrk1">What should I do to have the correct styling without refreshing the page?</p> <p data-svelte-h="svelte-9hmwf2"> </p> <h2 data-svelte-h="svelte-p8gbyt">Example of what I do want to achieve:</h2> <ul data-svelte-h="svelte-obdi9u"><li><a href="https://blazetype.eu/typefaces/">This</a> catalogue of typefaces has similar functionality to what I&#39;m looking for. If you click on some font&#39;s name, it will direct you to the subpage of the font with multiple testers (here called &quot;font samplers&quot; – you can see the sidenote on the left &quot;font sampler&quot;).</li> </ul> </div> 
+			
+			<script>
+				{
+					__sveltekit_1dxxesy = {
+						assets: "/sveltekit-issue-example",
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [{"type":"data","data":null,"uses":{}},null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.c6f7a6cb.js"),
+						import("./_app/immutable/entry/app.9718c1ce.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
